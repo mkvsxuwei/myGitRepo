@@ -1,0 +1,42 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'zhuce.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+  </head>
+  
+  <body>
+  <form action="ZhuceServlet"method="post" style="padding-top:-700px;">
+	   输入用户名:<input name="name" type="text"><br><br>
+	   输入密码:<input name="pwd" type="password"><br><br>
+	   选择性别:<input type="radio"name="sex"value="男"checked>男
+	        <input type="radio"name="sex"value="女">女<br><br>
+	   选择家乡:
+	   <select name="home">
+		   <option value="上海">上海</option>
+		   <option value="北京" selected>北京</option>
+		   <option value="纽约">纽约</option>
+   		</select><br>
+               填写个人信息:<br>
+	   <textarea name="info" row="5"cols="30"></textarea><br>
+	   <input type="reset"value="重置"><input type="submit"value="注册">
+   </form>
+  </body>
+</html>
